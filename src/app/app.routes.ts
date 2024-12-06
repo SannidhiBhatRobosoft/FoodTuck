@@ -14,6 +14,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { AuthGuard } from './auth.guard';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { VerifytokenComponent } from './components/verifytoken/verifytoken.component';
 export const routes: Routes = [
   { path: 'menu', component: SecondpageComponent, canActivate: [AuthGuard] },
   { path: '', component: HomepageComponent },
@@ -26,5 +27,6 @@ export const routes: Routes = [
   { path: 'cart', component: CartComponent , canActivate: [AuthGuard]},
   { path: 'shop/:_id', component: ProductDetailsComponent, canActivate: [AuthGuard] },
   { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
+  { path: 'verifytoken', component: VerifytokenComponent },
   { path: '**', component: NotfoundComponent},
 ];
