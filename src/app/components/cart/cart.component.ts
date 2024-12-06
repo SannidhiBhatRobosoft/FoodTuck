@@ -132,8 +132,9 @@ export class CartComponent implements OnInit {
       .subscribe(
         (res) => {
           //this.loading=false
-          console.log(res);
+          
           if (res?.cart?.items) {
+            this.ngOnInit()
             this.cartItems = res.cart.items; // Assign cart items if they exist
             this.calculateSubtotal(); // Calculate subtotal
             this.calculateTotal(); // Calculate total amount

@@ -20,6 +20,7 @@ export class RecentpostComponent implements OnInit {
       res => {
       //  console.log(res.data)
         this.recentpost = res.data; 
+       
       },
       err => {
         if(err.status===400){
@@ -38,5 +39,8 @@ export class RecentpostComponent implements OnInit {
       day: 'numeric' 
     };
     return d.toLocaleDateString('en-US', options); // 'en-US' gives the required format
+  }
+  clickonrecentpost(id:number){
+    this.router.navigate([`/blog/${id}`]);
   }
 }

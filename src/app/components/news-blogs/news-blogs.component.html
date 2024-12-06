@@ -5,13 +5,16 @@
   </div>
   <div class="blog-list"  >
     <div class="blog-card" *ngFor="let item of bloglist.slice(0, 4)">
-      <div class="blog-card-img">
-        <img [src]="item.image_url" alt="Burger" />
-      </div>
-      <div class="blog-card-content">
-        <p>{{ calculateDate(item.createdAt) }}</p>
-        <h3> {{ item.description }}</h3>
-        <a [href]="'/blog/' + item._id" class="blog-link">Learn More</a>
+      <div (click)="clickonrecentpost(item._id)">
+
+        <div class="blog-card-img">
+          <img [src]="item.image_url" alt="Burger" />
+        </div>
+        <div class="blog-card-content">
+          <p>{{ calculateDate(item.createdAt) }}</p>
+          <h3> {{ item.description }}</h3>
+          <a [href]="'/blog/' + item._id" class="blog-link">Learn More</a>
+        </div>
 
       </div>
     </div>

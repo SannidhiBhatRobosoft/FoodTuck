@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-news-blogs',
   standalone: true,
@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsBlogsComponent implements OnInit {
   public bloglist: any[] = [];
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private router:Router) {}
 
   ngOnInit(): void {
     this.http
@@ -33,5 +33,8 @@ export class NewsBlogsComponent implements OnInit {
       day: 'numeric',
     };
     return d.toLocaleDateString('en-US', options); // 'en-US' gives the required format
+  }
+  clickonrecentpost(id:number){
+    this.router.navigate([`/blog/${id}`]);
   }
 }

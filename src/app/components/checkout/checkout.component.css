@@ -1,219 +1,219 @@
-body{
-    font-family: Helvetica,Arial, sans-serif;
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.checkout-main-1 {
+  max-width: 1324px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 1;
+}
+
+.checkout-main-header {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.billing-add {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  margin-top: 20px;
+  padding: 2rem;
+}
+
+.checkout-form-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.names-form,
+.lastname-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 424px;
+}
+
+.checkout-form-div1,
+.checkout-form-div2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout-form-div1 .names-form,
+.checkout-form-div2 .lastname-form {
+  width: 100%;
+}
+
+.input {
+  max-width: 424px;
+  font-size: larger;
+  height: 56px;
+
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+#city,
+#country {
+  padding: 30px;
+  height: 10vh;
+}
+
+.option {
+  padding: 2rem;
+  font-size: 16px;
+  font-family: Helvetica;
+}
+
+.buttons-of-billing {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  max-width: 424px;
+  gap: 1rem;
+}
+
+.btn-add {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+placeOrder-btn {
+  max-width: 376px;
+}
+.btn-cart {
+  width: 424px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.btn-shipping {
+  width: 424px;
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ff7700;
+}
+button {
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.label {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.order-summary {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.order-summary h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.orderList {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.order-prices {
+  font-weight: bold;
+  color: #333;
+}
+
+.orderList span {
+  font-size: 16px;
+  color: #333;
+}
+
+strong {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Responsive Design */
+
+@media (max-width: 400px) {
+  .checkout-form-1 {
+    grid-template-columns: 1fr; /* Stack form fields vertically on small screens */
   }
+
   .checkout-main-1 {
-    max-width:1324px;
-    height: auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    opacity: 1;
+    margin-left: 25px;
   }
- 
+
   .checkout-main-header {
-    font-family: Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-   line-height: 28px;
-    margin-bottom: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 14px;
   }
- 
+
   .billing-add {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
     text-align: left;
     margin-top: 20px;
-  }
- 
-  .checkout-form-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-  }
- 
-  .names-form, .lastname-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 424px;
-  }
- 
-  .checkout-form-div1, .checkout-form-div2 {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
- 
-  .checkout-form-div1 .names-form,
-  .checkout-form-div2 .lastname-form {
-    width: 100%;
-  }
- 
-  .input {
-    max-width: 424px;
-    font-size: larger;
-    height: 56px;
-   
-    border: 1px solid #ccc;
-    margin-top: 5px;
-  }
- 
-  #city, #country {
-    padding: 30px;
-    height: 10vh;
-  }
- 
-  .option{
     padding: 2rem;
-    font-size: 16px;
-    font-family: Helvetica;
   }
+
  
-  .buttons-of-billing {
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f8f8;
-    max-width:424px ;
-    gap: 1rem;
-  }
- 
-  .btn-add {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  placeOrder-btn{
-    max-width: 376px;
-  }
-  .btn-cart {
-    width: 424px;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  .btn-shipping {
-    width: 424px;
-    padding: 10px 20px;
-    background-color: #ff9900;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-  }
- 
-  button:hover {
-    background-color: #ff7700;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: #ff9900;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    width: 100%;
-  }
- 
-  .label {
-    font-family: Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-  }
- 
+
   .order-summary {
+    width: 320px;
+   
+  }
+
+  .placeOrder-btn {
     width: 100%;
-    max-width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-   
-   
   }
  
-  .order-summary h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
- 
-  .order-item {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
- 
-  .orderList {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
- 
-  .order-prices {
-    font-weight: bold;
-    color: #333;
-  }
- 
-  .orderList span {
-    font-size: 16px;
-    color: #333;
-  }
- 
-  strong {
-    font-size: 18px;
-    color: #333;
-  }
- 
-  /* Responsive Design */
- 
-  @media (max-width: 400px) {
-    .checkout-form-1 {
-      grid-template-columns: 1fr; /* Stack form fields vertically on small screens */
-    }
- 
-    .checkout-main-1 {
-      margin-left: 25px;
-    }
- 
-   
- 
-    .checkout-main-header {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 300;
-     line-height: 20px;
-      margin-bottom: 14px;
-    }
-   
-    .billing-add {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 20px;
-      text-align: left;
-      margin-top: 20px;
-    }
-   
-    .btn-add {
-      flex-direction: column;
-    }
- 
-    .order-summary {
-      width: 300px;
-      /* max-width: none; */
-    }
- 
-    button {
-      width: 100%;
-    }
-  }
+}

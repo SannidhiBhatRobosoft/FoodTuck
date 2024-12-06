@@ -65,11 +65,17 @@ export class BlogdetailsComponent {
     return d.toLocaleDateString('en-US', options); // 'en-US' gives the required format
   }
   addComment() {
+
     const _id = this.route.snapshot.paramMap.get('_id') || '';
+    if (!this.usercomment.trim()) return;
     
     const token = localStorage.getItem('jwt-token')
       ? JSON.parse(localStorage.getItem('jwt-token') as string)
       : null;
+      if(!token)
+      {
+        this.router.navigate(['/login'])
+      }
    let commet={
     blogId:_id,
     comment:this.usercomment
@@ -113,6 +119,10 @@ export class BlogdetailsComponent {
     const token = localStorage.getItem('jwt-token')
     ? JSON.parse(localStorage.getItem('jwt-token') as string)
     : null;
+    if(!token)
+      {
+        this.router.navigate(['/login'])
+      }
     const headers = new HttpHeaders({
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',

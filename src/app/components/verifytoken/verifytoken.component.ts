@@ -13,6 +13,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
 import { InputFieldsComponent } from '../../shared/input-fields/input-fields.component';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { FooterComponent } from "../footer/footer.component";
 @Component({
   selector: 'app-verifytoken',
   standalone: true,
@@ -24,7 +26,9 @@ import { InputFieldsComponent } from '../../shared/input-fields/input-fields.com
     ButtonModule,
     ToastModule,
     InputFieldsComponent,
-  ],
+    NavbarComponent,
+    FooterComponent
+],
   providers: [MessageService],
   templateUrl: './verifytoken.component.html',
   styleUrl: './verifytoken.component.css',

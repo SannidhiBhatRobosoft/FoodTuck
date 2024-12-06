@@ -79,11 +79,13 @@
       font-size: 28px;
     }
     .food-items-list {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 10px;
     }
-    .image-container {
-      height: 120px;
+    
+
+    .image-container>img{
+      height:220px;
     }
   }
   
