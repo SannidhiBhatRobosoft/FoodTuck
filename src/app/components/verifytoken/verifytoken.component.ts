@@ -73,7 +73,7 @@ export class VerifytokenComponent {
                 summary: 'OTP',
                 detail: temp, // Display the message
               });
-              this.router.navigate(['/']);
+              this.router.navigate(['/login']);
               // Reset the signup form
               this.signupForm.reset();
             } else {
