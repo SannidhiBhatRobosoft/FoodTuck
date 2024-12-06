@@ -5,12 +5,15 @@
 }
 
 .logo {
+  
+  
   width: 109px;
   height: 32px;
   opacity: 1; /* Changed to visible */
 }
 
 .logo p {
+  margin: 0px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 24px;

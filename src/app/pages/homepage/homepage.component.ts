@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomepagenavbarComponent } from '../../components/homepagenavbar/homepagenavbar.component';
+
 import { HeaderComponent } from '../../components/header/header.component';
 import { HeropageComponent } from '../../components/heropage/heropage.component';
 import { FooterComponent } from '../../components/footer/footer.component';
@@ -16,7 +16,7 @@ import { TestimonialsComponent } from '../../components/testimonials/testimonial
   selector: 'app-homepage',
   standalone: true,
   imports: [
-    HomepagenavbarComponent,
+    
     HeaderComponent,
     HeropageComponent,
     FooterComponent,

@@ -1,16 +1,18 @@
 <div class="food-items">
-    <div class="food-items-main">
-        <h4> Food Category</h4>
-        <h1 class="foodC"><span>Ch</span>oose Food Item</h1>
- 
-        <div class="food-items-list">
-            <div class="items-list">
-                <div class="food-item-1"></div>
-                <div class="food-item-2"></div>
-                <div class="food-item-3"></div>
-                <div class="food-item-4"></div>
-            </div>
+  <div class="food-items-main">
+    <h4>Food Category</h4>
+    <h1 class="foodC"><span>Ch</span>oose Food Item</h1>
+
+    <div class="food-items-list" >
+        <div class="items-list">
+          <div 
+          class="image-container" 
+          *ngFor="let food of items" 
+          (click)="navigateToFoodDetails(food.id)">
+          <img [src]="food.image" [alt]="food.name" class="food-image" />
+          </div>
         </div>
-    </div>
- 
+      </div>
+      
+  </div>
 </div>
