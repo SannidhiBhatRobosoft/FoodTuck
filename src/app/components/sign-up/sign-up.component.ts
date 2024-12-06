@@ -129,6 +129,7 @@ export class SignUpComponent {
         
               // Reset the signup form
               this.signupForm.reset();
+              this.router.navigate(['/verifytoken']);
             } else {
               // Handle the case where `message` is missing
               this.messageService.add({
