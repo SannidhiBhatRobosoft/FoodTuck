@@ -1,0 +1,41 @@
+
+@if(!loading) {
+  <div *ngFor="let items of menuitems; let i = index">
+    <div class="outerdiv">
+      <div
+        class="innerdiv"
+        [ngClass]="{
+          row: !isSmallScreen && i % 2 === 0,
+          'row-reverse': !isSmallScreen && i % 2 !== 0,
+          column: isSmallScreen
+        }"
+      >
+        <div class="left">
+          <img [src]="items.category_image" />
+        </div>
+        <div class="right">
+          <img [src]="items.category_icon" />
+          <h1 class="statermenu">{{ items.category }}</h1>
+          <div *ngFor="let item of items.items.slice(0, 4)" class="component">
+            <div class="componentleft">
+              <p class="componentlefttitle">{{ item.name }}</p>
+              <p class="componentleftdesci">{{ item.ingredients }}</p>
+              <p class="componentleftcal">{{ item.calories }} CAL</p>
+            </div>
+            <div class="componentright">
+              <p class="componentrightprice">{{ item.price }}$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+} @else {
+  <div class="forspinner">
+
+    <div class="custom-spinner"></div>
+  </div>
+
+}

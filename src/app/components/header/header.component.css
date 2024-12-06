@@ -1,0 +1,35 @@
+.container {
+  background-image: url("../../../../public/img/unsplash_4ycv3Ky1ZZU.png");
+  background-repeat: no-repeat;
+  height: 410px;
+  background-size: cover;
+  background-position: center;
+}
+.menu-content {
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 410px;
+}
+#ourmenu {
+  font-weight: 700;
+  font-family: Helvetica;
+  font-size: 48px;
+  line-height: 56px;
+}
+.menu-details {
+  font-weight: 400;
+  font-family:Helvetica;
+  font-size: 20px;
+  line-height: 28px;
+}
+.menu-details span{
+ color:  #FF9F0D;
+ 
+}
+@media screen and (max-width:400px) {
+ 
+}

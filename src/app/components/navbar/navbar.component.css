@@ -1,0 +1,178 @@
+.nav-bar {
+  width: 100%;
+  height: 90px;
+  background-color: #000000;
+}
+
+.logo {
+  width: 109px;
+  height: 32px;
+  opacity: 1; /* Changed to visible */
+}
+
+.logo p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: white;
+}
+
+.logo span {
+  color: #ff9f0d;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.menu {
+  display: flex;
+  color: white;
+  width: auto;
+  justify-content: space-around;
+  font-family: Inter;
+  cursor: pointer;
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.menu a:hover {
+  color: #ff9f0d;
+  font-weight: 700;
+}
+
+.vectos {
+  display: flex;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.menu.active {
+  display: flex;
+}
+.menu {
+  display: flex;
+  color: white;
+  width: 550px;
+  justify-content: space-around;
+  font-family: Helvetica;
+  cursor: pointer;
+}
+.menu a:hover {
+  color: #ff9f0d;
+  font-weight: 700;
+}
+/* Additional styles for the menu when toggled via .elements */
+.elements {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 10px;
+  background-color: #000000;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.elements a {
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.elements.active {
+  display: flex;
+}
+
+@media screen and (max-width: 400px) {
+  .menu {
+    display: none; /* Hide the menu by default for smaller screens */
+    flex-direction: column;
+    gap: 10px;
+    background-color: #000000;
+    color: #fff;
+    position: absolute;
+    top: 90px; /* Positioned below the navbar */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000; /* Ensure it appears on top */
+  }
+
+  .menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger icon on smaller screens */
+  }
+
+  .vectos {
+    display: none; /* Hide icons on smaller screens */
+  }
+  .elements a:hover {
+    color: #ff9f0d;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none; /* Hide the menu by default for smaller screens */
+  }
+
+  .menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger icon on smaller screens */
+  }
+
+  .vectos {
+    display: none; /* Hide icons on smaller screens */
+  }
+  .elements a:hover {
+    color: #ff9f0d;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    gap: 2px;
+    background-color: #000000;
+    color: #fff;
+    z-index: 1000; /* Ensure it appears on top */
+  }
+}

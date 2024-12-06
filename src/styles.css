@@ -1,0 +1,28 @@
+/* @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"; */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+ 
+ 
+ 
+ 
+*{
+ 
+    scrollbar-width: 5px;
+   
+    scrollbar-color: #ff8f00 #0D0D0DF2;
+    scroll-behavior: smooth;
+}
+ 
+ 
+ 
+ 
+ 
+body{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    scrollbar-width: 10px;
+    scrollbar-color: #ff8f00 #0D0D0DF2;
+}

@@ -1,0 +1,17 @@
+<div class="inputdetails">
+  <img *ngIf="iconSrc" [src]="iconSrc" alt="icon" />
+  <input
+    [type]="type"
+    [id]="name"
+    [formControl]="control"
+    [placeholder]="placeholder"
+    class="form-control"
+  />
+</div>
+
+<!-- Validation error messages -->
+<div *ngIf="control?.touched && control?.invalid" class="error-message">
+  <small *ngFor="let errorKey of errorKeys">
+    {{ errorMessages[errorKey] }}
+  </small>
+</div>

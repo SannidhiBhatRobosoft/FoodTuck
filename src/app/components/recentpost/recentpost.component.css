@@ -1,0 +1,57 @@
+.container{
+    padding: 13%;
+    border: 1px solid #060F1E0F;
+}
+.title {
+   padding: 3% 0;
+font-family: Helvetica;
+font-size: 20px;
+font-weight: 700;
+line-height: 28px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+.products{
+    display: flex;
+  gap: 2rem;
+  padding: 2% 0;
+}
+.date{
+ color: #828282;
+font-family: Helvetica;
+font-size: 10px;
+font-weight: 400;
+line-height: 22px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.left img {
+  border-radius: 5px;
+  width: 99px;
+  height: 92px;
+  
+  object-fit: cover; /* Ensures the image fits within the dimensions */
+}
+
+.content{
+  
+font-family: Helvetica;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+.horizontalline{
+   
+height: 1px;
+top: 106.51px;
+gap: 0px;
+border: 1px 0px 0px 0px;
+opacity: 0.17px;
+background-color: #707070;
+}

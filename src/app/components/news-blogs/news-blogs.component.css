@@ -1,0 +1,99 @@
+.blogs-main {
+    /* width: 100%; */
+    background-color: #0d0d0d;
+    padding: 1rem 1rem;
+    text-align: center;
+}
+ 
+.blog-title>h3 {
+    color: #FF9F0D;
+    font-family: "Great Vibes", serif;
+    font-size: 32px;
+    margin: 1rem 0 0;
+}
+ 
+.blog-title>h1 {
+    color: #fff;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    margin: 0 0 3rem;
+}
+ 
+.blog-title>h1>span {
+    color: #FF9F0D;
+}
+ 
+.blog-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ 
+ 
+.blog-card {
+    background: #0D0D0DF2;
+    color: #fff;
+    border: 1px solid #fff;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+ 
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+ 
+.blog-card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+ 
+.blog-card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+ 
+.blog-card-content p {
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FF9F0D;
+}
+ 
+.blog-card-content h3 {
+    margin: 0.5rem 0;
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.blog-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+ 
+.blog-link:hover {
+    color: #FF9F0D;
+}
+ 
+ 
+@media screen and (max-width: 480px) {
+    .blog-title>h1 {
+        font-size: 32px;
+        margin-bottom: 1rem;
+    }
+    .blog-title>h3 {
+        font-size: 22px;
+    }
+}

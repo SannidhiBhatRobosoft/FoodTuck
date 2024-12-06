@@ -1,0 +1,35 @@
+<div *ngFor="let item of blogitems">
+  <div class="container">
+    <div class="imga">
+      <img [src]="item.image_url" />
+    </div>
+
+    <div class="content">
+      <div class="date">
+        <img src="/img/Calendar.png" />
+        <span>{{ calculateDate(item.createdAt) }}</span>
+      </div>
+      <div class="comments">
+        <img src="/img/Chats.png" />
+        <span>{{ item.comments.length }} </span>
+      </div>
+      <div class="admin">
+        <img src="/img/UserCirclePlus.png" />
+        <span>{{ item.author }} </span>
+      </div>
+    </div>
+    <div class="title">
+      <h1>{{ item.blog_name }}</h1>
+    </div>
+    <div class="horizontalline"></div>
+    <div class="desci">
+      <p>
+        {{ item.description }}
+      </p>
+    </div>
+    <div class="readmore" (click)="individualsblogdetails(item._id)">
+      <button>Read More</button>
+      <img src="/img/ArrowLineUpRight.png" />
+    </div>
+  </div>
+</div>

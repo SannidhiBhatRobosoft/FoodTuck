@@ -1,0 +1,69 @@
+.outerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+}
+
+.innerdiv {
+  height: 550px;
+  width: 80%;
+  display: flex;
+}
+.right {
+  height: 550px;
+  display: flex;
+  justify-content: end;
+  object-fit: cover;
+  width: 40%;
+}
+.right img{
+  height: 550px;
+  
+}
+.left {
+  margin-right: 20px;
+  width: 60%;
+}
+.statermenu {
+  font-weight: 700;
+  font-family: Helvetica;
+  font-size: 48px;
+  line-height: 56px;
+}
+.component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 111px;
+}
+.componentlefttitle {
+  font-weight: 700;
+  font-family: Helvetica;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+}
+.componentleftdesci {
+  font-weight: 400;
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+}
+.componentleftcal {
+  font-weight: 400;
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+}
+.componentrightprice {
+  font-weight: 700;
+  font-family: Helvetica;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: #ff9f0d;
+}

@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+<div class="cart-container">
+    <div class="cart-header">
+      <div class="cart-header-item">Product</div>
+      <div class="cart-header-item">Price</div>
+      <div class="cart-header-item">Quantity</div>
+      <div class="cart-header-item">Total</div>
+      <div class="cart-header-item">Remove</div>
+    </div>
+   
+    <!-- Loop through cartItems and display each item -->
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <!-- Product Section -->
+      <div class="cart-item-details">
+        <img [src]="item.images[0]" alt="{{ item.name }}" class="product-image" />
+        <div class="product-info">
+          <h4>{{ item.name }}</h4>
+          <div class="rating">
+            <span *ngFor="let star of [].constructor(5); let i = index"
+                  [class.filled]="i < item.ratings">
+              {{ i < item.ratings ? '&#9733;' : '&#9734;' }}
+            </span>
+          </div>
+        </div>
+      </div>
+   
+      <!-- Price Section -->
+      <div class="price">
+       <span class="discount-price">₹{{ item.discounted_price }}</span> 
+        <span class="item-price">₹{{ item.original_price }}</span>
+      </div>
+   
+      <!-- Quantity Section -->
+      <div class="quantity">
+        <button (click)="decrementQuantity(item)">-</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="incrementQuantity(item)">+</button>
+      </div>
+   
+      <!-- Total Section -->
+      <div class="total">
+        ₹{{ (item.discounted_price * item.quantity) | number: '1.2-2' }}
+      </div>
+   
+      <!-- Remove Section -->
+      <div class="remove">
+        <button (click)="removeProduct(item.id)">&#10005;</button>
+      </div>
+    </div>
+   
+    <!-- New Coupon Section and Total Bill Summary -->
+    <div class="coupon-and-bill-summary">
+      <!-- Left Section: Coupon Code -->
+      <div class="left-section">
+        <h3>Coupon Code</h3>
+        <div class="coupon-code">
+          <input type="text" placeholder="Enter coupon code" [(ngModel)]="couponCode" />
+          <button (click)="applyCoupon()">Apply</button>
+        </div>
+      </div>
+   
+      <!-- Right Section: Total Bill Summary -->
+      <div class="right-section">
+        <h3>Total Bill</h3>
+        <div class="bill-summary">
+          <div class="bill-item">
+            <span>Cart Subtotal:</span>
+            <span>₹{{ subtotal }}</span>
+          </div>
+          <div class="bill-item">
+            <span>Shipping Charge:</span>
+            <span><strong>FREE</strong></span>
+          </div>
+          <div class="total-amount">
+            <span>Total Amount:</span>
+            <span>₹{{ totalAmount }}</span>
+          </div>
+        </div>
+        <button class="checkout-btn" (click)="checkout()">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

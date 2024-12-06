@@ -1,0 +1,178 @@
+.WhyChooseUs {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+    gap: 20px;
+    background-color: #0d0d0d;
+}
+ 
+ 
+.WhyChooseUs-left {
+    flex: 1;
+}
+ 
+.WhyChooseUs-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+ 
+.WhyChooseUs-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+ 
+ 
+.WhyChooseUs-right {
+    flex: 1;
+    text-align: left;
+}
+ 
+ 
+.WhyChooseUs-title {
+    margin-bottom: 20px;
+}
+ 
+.WhyChooseUs-subtitle {
+    font-size: 20px;
+    color: #FF9F0D;
+    margin-bottom: 10px;
+    font-family: "Great Vibes", serif;
+}
+ 
+.WhyChooseUs-maintitle {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff;
+}
+ 
+.WhyChooseUs-maintitle span {
+    color: #FF9F0D;
+}
+ 
+.WhyChooseUs-description {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b8b8b8;
+}
+ 
+ 
+.WhyChooseUs-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+ 
+.WhyChooseUs-item {
+    text-align: center;
+}
+ 
+.iteamBack {
+    width: 60px;
+    height: 60px;
+    background-color: #FF9F0D;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+}
+ 
+.iteamBack img {
+    width: 30px;
+    height: 30px;
+}
+ 
+.WhyChooseUs-item-title {
+    font-size: 14px;
+    color: #fff;
+}
+ 
+ 
+.YearsofExperience {
+   
+    display: inline-block;
+    border-radius: 5px;
+}
+ 
+.YearsofExperience img {
+    width: 80%;
+    margin-right: 10px;
+    /* vertical-align: middle; */
+}
+ 
+@media screen and (max-width: 480px) {
+    .WhyChooseUs{
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px
+    }
+ 
+    .YearsofExperience{
+        display: flex;
+        justify-content: center;
+    }
+ 
+    .WhyChooseUs-list{
+        display: flex;
+        justify-content: center;
+       
+        align-items: center;
+    }
+ 
+    .WhyChooseUs-subtitle{
+        text-align: center;
+        font-size: 22px;
+    }
+ 
+    .WhyChooseUs-title{
+        text-align: center;
+       
+    }
+ 
+    .WhyChooseUs-maintitle{
+        font-size: 28px;
+        margin: 0;
+    }
+ 
+    .WhyChooseUs-description{
+        text-align: justify;
+        font-size: 14px;
+    }
+}
+ 
+ 
+@media screen and (max-width: 720px) {
+    .WhyChooseUs{
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px
+    }
+ 
+    .WhyChooseUs-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+ 
+    .WhyChooseUs-title{
+        margin-bottom: 0;
+    }
+   
+    .WhyChooseUs-description{
+        margin-bottom: 0;
+    }
+}

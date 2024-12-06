@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="product-details">
+    <!-- Left Side: Image -->
+    <div class="product-image" >
+      <img [src]="product.images" alt="Product Image" />
+    </div>
+  
+    <!-- Right Side: Details -->
+    <div class="product-info">
+      <!-- Title -->
+      <h1 class="product-title">{{ product.name }}</h1>
+  
+      <!-- Description -->
+      <p class="product-description">{{ product.description }}</p>
+  
+      <!-- Price -->
+      <p class="product-price">Price: ₹{{ product.original_price }}</p>
+  
+      <!-- Rating -->
+      <div class="rating">
+        <span *ngFor="let star of [].constructor(5); let i = index"
+              [class.filled]="i < product.ratings">
+          {{ i < product.ratings ? '&#9733;' : '&#9734;' }}
+        </span>
+      </div>
+  
+      <!-- Quantity -->
+      <div class="quantity-control">
+        <label for="quantity">Quantity:</label>
+        <button (click)="decreaseQuantity()">-</button>
+        <input id="quantity" type="number" [value]="quantity" readonly />
+        <button (click)="increaseQuantity()">+</button>
+      </div>
+  
+      <!-- Add to Cart Button -->
+      <button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
+    </div>
+    <p-toast></p-toast>
+  </div>
+  <app-footer></app-footer>

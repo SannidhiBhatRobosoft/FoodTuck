@@ -1,0 +1,8 @@
+
+
+
+.container {
+  
+  display: grid;
+  gap: 20px; /* Adds 20px space between components */
+}

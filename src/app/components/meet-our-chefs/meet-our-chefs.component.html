@@ -1,0 +1,30 @@
+<div class="chef-container">
+    <div class="chef-heading">
+      <h3>Chefs</h3>
+      <h1 class="chefs-title"><span>Me</span>et Our Chef</h1>
+    </div>
+  
+    <div class="chef-list">
+      <div class="chef-card" *ngFor="let chef of chefs.slice(0, value)">
+        <div
+          class="chef-image"
+          [ngStyle]="{ 'background-image': 'url(' + chef.image_url + ')' }"
+        ></div>
+        <div class="chef-overlay">
+          <h2>{{ chef.name }}</h2>
+          <p>{{ chef.specialty }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="seebtn">
+      <button 
+        class="seemore" 
+        (click)="temp ? seeMore() : seeless()" 
+        [disabled]="value >= chefs.length && temp">
+        {{ temp ? 'See More' : 'See Less' }}
+      </button>
+    </div>
+    
+    
+  </div>
+  

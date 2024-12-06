@@ -1,0 +1,76 @@
+<div class="container1">
+  <div class="content1">
+    <!-- Left: Images grid -->
+    <div class="left">
+      <div class="grid" >
+        <!-- Display grid of items -->
+        <div *ngFor="let item of paginatedItemsData" class="grid-item" (click)="individualsblogdetails(item.categoryId)">
+          <img [src]="item.image" [alt]="item.name" class="item-image" />
+          <div class="item-info">
+            <h4 class="item-name">{{ item.name }}</h4>
+            <span class="item-info-spans">
+              <span class="discount-price">${{item.discounted_price}}</span>
+              <span class="item-price">${{ item.original_price }}</span>
+            </span>
+   
+            
+          </div>
+        </div>
+      </div>
+      <!-- Pagination controls -->
+      <div class="pagination">
+        <!-- Previous Button -->
+        <button
+          (click)="changePageRange('prev')"
+          [disabled]="currentPage === 1"
+        >
+          <<
+        </button>
+
+        <!-- Page Numbers -->
+        <span *ngFor="let page of pageNumbers">
+          <button
+            [class.active]="currentPage === page"
+            (click)="changePage(page)"
+          >
+            {{ page }}
+          </button>
+        </span>
+
+        <!-- Next Button -->
+        <button
+          (click)="changePageRange('next')"
+          [disabled]="currentPage === totalPages"
+        >
+          >>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Right: Categories with checkboxes -->
+  <div class="right">
+    <!-- Search bar above categories -->
+    <div class="search-bar">
+      <input
+        type="text"
+        [(ngModel)]="searchText"
+        (input)="filterCategories()"
+        placeholder="Search categories..."
+      />
+      <img class="mag-img" src="/MagnifyingGlass.png" alt="Search Icon" />
+    </div>
+    <h3>Categories</h3>
+    <form [formGroup]="form">
+      <div *ngFor="let category of filteredCategories; let i = index" >
+        <label>
+          <input
+            type="checkbox"
+            (change)="onCategoryChange(category.id)"
+            [checked]="filters.includes(category.id)"
+          />
+          {{ category.name }}
+        </label>
+      </div>
+    </form>
+  </div>
+</div>

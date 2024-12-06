@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<div class="outerdiv">
+  @if(!loading){
+  <div class="innerdiv">
+    <h1>Sign Up</h1>
+
+    <!-- Form start -->
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="input-fields">
+        <app-input-fields
+  label="Name"
+  type="text"
+  name="name"
+  placeholder="Enter your Name"
+  [iconSrc]="'/img/User (1).png'"
+  [control]="nameControl"
+  [errorMessages]="{
+    required: 'Name is required.',
+    minlength: 'Name must be at least 3 characters long.',
+    NameError: 'Name cannot contain numbers, invalid characters, or special characters.'
+  }"
+></app-input-fields>
+
+
+        <!-- Email Field -->
+        <app-input-fields
+          label="Email"
+          type="email"
+          name="email"
+          placeholder="Enter your Email"
+          [iconSrc]="'/img/EnvelopeSimple.png'"
+          [control]="emailControl"
+          [errorMessages]="{
+            required: 'Email is required.',
+            email: 'Enter a valid email address.',
+            gmail: 'Email must end with @gmail.com'
+          }"
+        ></app-input-fields>
+
+        <!-- Password Field -->
+        <app-input-fields
+          label="Password"
+          type="password"
+          name="password"
+          placeholder="Enter your Password"
+          [iconSrc]="'/img/Lock.png'"
+          [control]="passwordControl"
+          [errorMessages]="{
+            required: 'Password is required.',
+            minlength: 'Password must be at least 6 characters long.',
+            passwordStrength:
+              'Password must contain both letters , numbers and atleast one Special Charatar [@,$,#,%].'
+          }"
+        ></app-input-fields>
+
+        <!-- Password Field -->
+      </div>
+
+      <!-- Remember Me checkbox -->
+      <div class="form-group">
+        <label><input type="checkbox" /> Remember Me</label>
+      </div>
+
+      <!-- Submit button -->
+      <div class="signup">
+        <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+      </div>
+    </form>
+  </div>
+  } @else {
+
+  <div class="custom-spinner"></div>
+  }
+  <p-toast></p-toast>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,137 @@
+.NumbersMain {
+    background: url('/img/10back.jpg');
+    background-size: 100%;
+    background-position: 0rem;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+ 
+}
+ 
+.Numbers-container {
+    background-color: rgba(0, 0, 0, 0.767);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+ 
+ 
+.numbers-1,
+.numbers-2,
+.numbers-3,
+.numbers-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.numbers-1>img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+ 
+.numbers-2>img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+ 
+.numbers-3>img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+ 
+.numbers-4>img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+ 
+h1 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 1rem;
+    font-weight: 600;
+}
+ 
+h2 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+ 
+@media screen and (max-width: 480px) {
+    .Numbers-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 2rem;
+    }
+ 
+    .NumbersMain {
+        height: auto;
+        background-size: cover;
+ 
+    }
+ 
+    .numbers-1,
+    .numbers-2,
+    .numbers-3,
+    .numbers-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+ 
+    }
+ 
+    .numbers-1>img,
+    .numbers-2>img,
+    .numbers-3>img,
+    .numbers-4>img {
+        width: 50px;
+    }
+ 
+    h1 {
+        font-size: 28px;
+    }
+ 
+    h2 {
+        font-size: 20px;
+    }
+ 
+}
+ 
+@media screen and (max-width: 620px) {
+ 
+    .numbers-1,
+    .numbers-2,
+    .numbers-3,
+    .numbers-4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+ 
+    }
+ 
+    h2 {
+        font-size: 15px;
+    }
+    h1{
+        font-size: 20px;
+    }
+ 
+    .numbers-1>img,
+    .numbers-2>img,
+    .numbers-3>img,
+    .numbers-4>img {
+        width: 60%;
+ 
+    }
+}
+ 
+@media screen and (max-width: 780px) {}

@@ -1,0 +1,34 @@
+.outerdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+  }
+  .innerdiv{
+    align-items: center;
+    text-align: center;
+    
+  }
+   .code{
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 104px;
+    color: #FF9F0D;
+  }
+  .content{
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .para{
+    display: flex;
+    width: 80%;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+
+    padding-left: 10%;
+  }

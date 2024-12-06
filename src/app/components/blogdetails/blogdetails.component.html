@@ -1,0 +1,88 @@
+@if(!loading)
+{
+  <div class="container" >
+  <div class="blog-header">
+    <div class="blog-image">
+      <img [src]="item?.image_url" alt="{{ item?.blog_name }}" />
+    </div>
+    <div class="blog-title-section">
+      <h1 class="blog-title">{{ item.blog_name }}</h1>
+      <p class="blog-quote">"{{ item.quote }}"</p>
+    </div>
+  </div>
+
+  <!-- Blog Metadata Section -->
+  <div class="content">
+    <div class="date">
+      <img src="/img/Calendar.png" alt="Calendar Icon" />
+      <span>{{ calculateDate(item.createdAt) }}</span>
+    </div>
+    <div class="comments" (click)="scrollToComments()">
+      <img src="/img/Chats.png" alt="Comments Icon" />
+      <span>{{ item.comments.length }} Comments</span>
+    </div>
+    <div class="admin">
+      <img src="/img/UserCirclePlus.png" alt="Admin Icon" />
+      <span>{{ item.author }}</span>
+    </div>
+  </div>
+
+  <!-- Blog Description Section -->
+  <div class="blog-description">
+    <p>{{ item.description }}</p>
+  </div>
+
+  <!-- Horizontal Line -->
+  <div class="horizontalline"></div>
+
+  <!-- Comments Section -->
+  <div class="comments-section" id="comments-section">
+    <h3>Comments ({{ item?.comments?.length || 0 }})</h3>
+    <div *ngFor="let comment of item.comments; let i = index" class="comment">
+      <div class="comment-header">
+        <p class="comment-user"><strong>{{ comment.user }}</strong>:</p>
+        <div class="add-reply" (click)="toggleReplyInput(i)">
+          <img src="/img/ArrowBendDoubleUpLeft.png" alt="Reply Icon" />
+          <label>Reply</label>
+        </div>
+      </div>
+      <p class="comment-text">{{ comment.comment }}</p>
+      <p class="comment-date">{{ calculateDate(comment.createdAt) }}</p>
+  
+      <!-- Reply Input Section -->
+      <div *ngIf="showReplyInputIndex === i" class="reply-input">
+        <input
+          type="text"
+          [(ngModel)]="replyText"
+          placeholder="Write your reply..."
+        />
+        <button (click)="submitReply(comment._id)">Submit</button>
+      </div>
+  
+      <!-- Replies Section -->
+      <div class="replies" *ngIf="comment.replies?.length">
+        <h4>Replies ({{ comment.replies.length }})</h4>
+        <div *ngFor="let reply of comment.replies" class="reply">
+          <div class="reply-header">
+            <p class="reply-user"><strong>{{ reply.user }}</strong>:</p>
+          </div>
+          <p class="reply-text">{{ reply.comment }}</p>
+          <p class="reply-date">{{ calculateDate(reply.createdAt) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="addComment">
+   <input type="text" placeholder="Add Comments...." [(ngModel)]="usercomment" required="Please enter the Comments">
+   <button (click)="addComment()">Add Comment</button>
+  </div>
+</div>
+}
+@else {
+  <div class="forspinner">
+
+    <div class="custom-spinner"></div>
+  </div>
+
+}

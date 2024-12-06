@@ -1,0 +1,52 @@
+<div class="nav-bar">
+  <div class="content">
+    <div class="logo">
+      <p>Food<span>tuck</span></p>
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+      <!-- Elements to toggle -->
+    </div>
+    <div class="elements" [style.display]="isMenuOpen ? 'flex' : 'none'">
+      <a href="/">Home</a>
+      <a href="/menu">Menu</a>
+      <a href="/aboutus">About</a>
+      <a href="/blog">Blog</a>
+
+      <a href="/shop">Shop</a>
+      @if(!isLoggedIn){
+        <a href="/sign-up">Sign Up</a>
+        <a href="/login">Logn In</a>
+      }
+      @else {
+        <a href="/cart" >Cart</a>
+        <a href="/" (click)="logout()">Log Out</a>
+      }
+    </div>
+    <div class="menu">
+      <a href="/">Home</a>
+      <a href="/menu">Menu</a>
+      <a href="/aboutus">About</a>
+      <a href="/blog">Blog</a>
+
+      <a href="/shop">Shop</a>
+      @if(!isLoggedIn){
+        <a href="/sign-up">Sign Up</a>
+        <a href="/login">Logn In</a>
+      }
+      @else {
+        <a href="/cart" >Cart</a>
+        <a href="/" (click)="logout()">Log Out</a>
+      }
+
+    
+    </div>
+    <div class="vectos">
+      <img src="/img/MagnifyingGlass.png" alt="" />
+      <img src="/img/User.png" alt="image" />
+      <img src="/img/Tote.png" alt="image" />
+    </div>
+  </div>
+</div>

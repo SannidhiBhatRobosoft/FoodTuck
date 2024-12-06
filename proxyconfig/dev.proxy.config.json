@@ -1,0 +1,8 @@
+{
+    "/**":{
+        "target":"https://lovely-gelato-95a9f3.netlify.app/api/",
+        "secure":true,
+        "changeOrigin":true
+
+    }
+}

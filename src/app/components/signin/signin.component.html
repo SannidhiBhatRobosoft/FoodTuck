@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="outerdiv">
+  @if(!loading){
+  <div class="innerdiv">
+    <h1>Sign In</h1>
+
+    <!-- Form start -->
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="input-fields">
+        <!-- Email Field -->
+        <app-input-fields
+          label="Email"
+          type="email"
+          name="email"
+          placeholder="Enter your Email"
+          [iconSrc]="'/img/EnvelopeSimple.png'"
+          [control]="emailControl"
+          [errorMessages]="{
+            required: 'Email is required.',
+            email: 'Enter a valid email address.',
+            gmail: 'Email must end with @gmail.com'
+          }"
+        ></app-input-fields>
+
+        <!-- Password Field -->
+        <app-input-fields
+          label="Password"
+          type="password"
+          name="password"
+          placeholder="Enter your Password"
+          [iconSrc]="'/img/Lock.png'"
+          [control]="passwordControl"
+          [errorMessages]="{
+            required: 'Password is required.',
+            minlength: 'Password must be at least 6 characters long.',
+
+            passwordStrength:
+              'Password must contain both letters , numbers and atleast one Special Charatar [@,$,#,%].'
+          }"
+        ></app-input-fields>
+      </div>
+
+      <!-- Remember Me checkbox -->
+      <div class="form-group">
+        <label><input type="checkbox" /> Remember Me</label>
+      </div>
+
+      <!-- Submit button -->
+      <div class="signup">
+        <button type="submit" [disabled]="signupForm.invalid">Sign In</button>
+      </div>
+    </form>
+
+   
+  </div>
+  } @else {
+  <div class="custom-spinner"></div>
+
+  }
+  <p-toast></p-toast>
+</div>
+<app-footer></app-footer>

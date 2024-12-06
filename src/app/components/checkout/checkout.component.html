@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+<div class="checkout-main-1">
+    <div class="checkout-main-header">
+      <h1>Shipping Address</h1>
+    </div>
+    <div class="checkout-main-form">
+ 
+      <div class="checkout-form-1">
+        <div class="checkout-form-div1">
+          <div class="names-form">
+            <label class="label" for="first-name">First Name</label>
+            <input class="input" type="text" id="first-name" name="firstName" [(ngModel)]="shipping.firstName" required>
+ 
+            <label class="label" for="email">Email Address</label>
+            <input class="input" type="email" id="email" name="email" [(ngModel)]="shipping.email" required>
+ 
+            <label class="label" for="company">Company</label>
+            <input class="input" type="text" id="company" name="company" [(ngModel)]="shipping.company">
+ 
+            <label class="label" for="city">City</label>
+            <select class="input" id="city" name="city" [(ngModel)]="shipping.city" required>
+              <option class="label" value="">Choose city</option>
+              <option class="label" *ngFor="let city of cities" [value]="city">{{ city }}</option>
+            </select>
+ 
+            <label class="label" for="address1">Address 1</label>
+            <input class="input" type="text" id="address1" name="address1" [(ngModel)]="shipping.address1" required>
+          </div>
+        </div>
+ 
+        <div class="checkout-form-div2">
+          <div class="lastname-form">
+            <label class="label" for="last-name">Last Name</label>
+            <input class="input" type="text" id="last-name" name="lastName" [(ngModel)]="shipping.lastName" required>
+ 
+            <label class="label" for="phone">Phone Number</label>
+            <input class="input" type="tel" id="phone" name="phone" [(ngModel)]="shipping.phone" required>
+ 
+            <label class="label" for="country">Country</label>
+            <select class="input" id="country" name="country" [(ngModel)]="shipping.country" required>
+              <option class="option" value="">Choose country</option>
+              <option class="label" *ngFor="let country of countries" [value]="country">{{ country }}</option>
+            </select>
+ 
+            <label class="label" for="zip">Zip Code</label>
+            <input class="input" type="text" id="zip" name="zip" [(ngModel)]="shipping.zip" required>
+ 
+            <label class="label" for="address2">Address 2</label>
+            <input class="input" type="text" id="address2" name="address2" [(ngModel)]="shipping.address2">
+          </div>
+        </div>
+        <!-- Order Summary Section -->
+      <section class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="order-item">
+          <p>Chicken Tikka Kabab - 150 gm net</p>
+          <p>Price: $50</p>
+        </div>
+        <div class="order-item">
+          <div class="orderList">
+            <span>Sub-total:</span> <span class="order-prices">$130</span>
+          </div>
+          <div class="orderList">
+            <span>Discount: </span><span class="order-prices">25%</span>
+          </div>
+          <div class="orderList">
+            <span>Tax: </span> <span class="order-prices">$54.76</span>
+          </div>
+          <div class="orderList">
+            <span>Shipping:</span> <span class="order-prices">Free</span>
+          </div>
+          <div class="orderList">
+            <span>Total:</span> <span class="order-prices">$432.65</span>
+          </div>
+        </div>
+        <button class="placeOrder-btn" (click)="placeOrder()">Place an Order</button>
+      </section>
+      </div>
+ 
+     
+ 
+    </div>
+  </div>
+ 
+  <div class="billing-add">
+    <h1>Billing Add</h1>
+    <input type="checkbox" name="" id="">
+    <label for="">Same as Shipping Address</label>
+ 
+    <div class="btn-add">
+      <button class="btn-cart">Back to Cart</button>
+      <button class="btn-shipping">Proceed to Shipping</button>
+    </div>
+  </div>
+<app-footer></app-footer>

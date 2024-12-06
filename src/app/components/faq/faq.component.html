@@ -1,0 +1,59 @@
+<div class="outerdiv">
+    <div class="innerdiv">
+      <div class="heads">
+        <h1>Questions Look Here</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+      </div>
+  
+      <div class="row">
+        <!-- Left Column -->
+        <div class="left-column">
+          <ng-container *ngFor="let section of sections; let i = index">
+            <!-- Only render the left section for even indexed items -->
+            <div *ngIf="i % 2 === 0" [ngClass]="{ active: section.isContentVisible }">
+              <div class="left">
+                <div class="leftinnerdiv">
+                  <h3>{{ section.question }}</h3>
+                  <img
+                    src="/img/Plus.png"
+                    (click)="toggleContent(section._id)"
+                    [class.rotated]="section.isImageRotated"
+                    style="cursor: pointer;"
+                  />
+                </div>
+                <div class="content-wrapper" [ngClass]="{ show: section.isContentVisible }">
+                  <p class="content">{{ section.answer }}</p>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+  
+        <!-- Right Column -->
+        <div class="right-column">
+          <ng-container *ngFor="let section of sections; let i = index">
+            <!-- Only render the right section for odd indexed items -->
+            <div *ngIf="i % 2 !== 0" [ngClass]="{ active: section.isContentVisible }">
+              <div class="right">
+                <div class="leftinnerdiv">
+                  <h3>{{ section.question }}</h3>
+                  <img
+                    src="/img/Plus.png"
+                    (click)="toggleContent(section._id)"
+                    [class.rotated]="section.isImageRotated"
+                    style="cursor: pointer;"
+                  />
+                </div>
+                <div class="content-wrapper" [ngClass]="{ show: section.isContentVisible }">
+                  <p class="content">{{ section.answer }}</p>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  

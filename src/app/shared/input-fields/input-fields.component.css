@@ -1,0 +1,24 @@
+.inputdetails input {
+    width: 100%;
+    border: none;
+  }
+  
+  .inputdetails input:focus {
+    border: none;
+    outline: none;
+  }
+  
+.inputdetails {
+    height: 35px;
+    border: 1px solid;
+    border-style: ridge;
+    display: flex;
+    padding: 2px;
+    gap: 1rem;
+    margin: 10px 0px;
+  }
+  
+.error-message {
+    color: red;
+    font-size: 16px;
+  }

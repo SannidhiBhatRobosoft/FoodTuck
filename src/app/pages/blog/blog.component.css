@@ -1,0 +1,16 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 70% 30%; /* Define column widths */
+    gap: 10px; /* Optional: Space between items */
+    min-height: 100vh; /* Optional: Full viewport height */
+    padding: 3% 10%;
+  }
+.footer{
+
+}
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }

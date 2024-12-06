@@ -1,0 +1,39 @@
+<div class="outerdiv">
+  @if(!loading){
+  <div class="innerdiv">
+    <h1>Verify OTP</h1>
+
+    <!-- Form start -->
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="input-fields">
+        <!-- Email Field -->
+        <app-input-fields
+          label="otp"
+          type="numbers"
+          name="otp"
+          placeholder="Enter your OTP"
+          [iconSrc]="'/img/EnvelopeSimple.png'"
+          [control]="tokenControl"
+          [errorMessages]="{
+            required: 'Token is required.',
+            minlength: 'Token must be at least 4 characters long.',
+          }"
+        ></app-input-fields>
+
+      
+      </div>
+
+      <!-- Submit button -->
+      <div class="signup">
+        <button type="submit" [disabled]="signupForm.invalid">Verify Token</button>
+      </div>
+    </form>
+
+    
+  </div>
+  } @else {
+  <div class="custom-spinner"></div>
+
+  }
+  <p-toast></p-toast>
+</div>
