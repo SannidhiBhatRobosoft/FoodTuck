@@ -1,129 +1,137 @@
 .outerdiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0d0d0d;
-  }
-  
-  .innerdiv {
-    width: 100%;
-    text-align: center;
-    height: auto;
-    padding: 100px 46px;
-    box-shadow: 4px 4px 10px 5px rgba(185, 20, 83, 0.1);
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d0d;
+}
+
+.innerdiv {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding: 100px 46px;
+  box-shadow: 4px 4px 10px 5px rgba(185, 20, 83, 0.1);
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Left and Right Section Styles */
+.left,
+.right {
+  background-color: transparent;
+  /* Initially no background color */
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.leftinnerdiv {
+  background-color: #FAF7F2;
+}
+
+/* When the content is expanded (applies when image is clicked) */
+.left.active,
+.right.active {
+  background-color: #faf7f2;
+  /* Background color is applied when content is shown */
+}
+
+.row h3 {
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+}
+
+.heads h1 {
+  font-family: Helvetica;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+}
+
+.heads p {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.leftinnerdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.leftinnerdiv img {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.leftinnerdiv img.rotated {
+  transform: rotate(360deg);
+}
+
+.content-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.content-wrapper p {
+  background-color: #FAF7F2;
+}
+
+.content-wrapper.show {
+  max-height: 1000px;
+}
+
+.content {
+  padding: 10px 20px;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+@media screen and (max-width: 420px) {
+
   .row {
-    display: flex;
-    gap: 15px;
-    padding: 10px;
-  }
-  
-  /* Left and Right Section Styles */
-  .left, .right {
-    background-color: transparent; /* Initially no background color */
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    display: flex;
     flex-direction: column;
-    
+    padding: 0;
   }
-  .leftinnerdiv{
-    background-color: #FAF7F2;
-  }
-  /* When the content is expanded (applies when image is clicked) */
-  .left.active, .right.active {
-    background-color: #faf7f2; /* Background color is applied when content is shown */
-  }
-  
-  .row h3 {
-    font-family: Helvetica;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
-    text-align: left;
-  }
-  
-  .heads h1 {
-    font-family: Helvetica;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .heads p {
-    font-family: Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .leftinnerdiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .leftinnerdiv img {
-    cursor: pointer;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .leftinnerdiv img.rotated {
-    transform: rotate(360deg);
-  }
-  
-  .content-wrapper {
-    overflow: hidden;
-    max-height: 0; 
-    transition: max-height 0.3s ease-in-out;
-  }
-  .content-wrapper p{
-    background-color: #FAF7F2;
-  }
-  
-  .content-wrapper.show {
-    max-height: 1000px; 
-  }
-  
-  .content {
-    padding:10px 20px ;
-    font-family: Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  
 
-  @media screen and (max-width: 420px) {
-
-    .row{
-      flex-direction: column;
-      padding: 0;
-    }
-
-    .innerdiv{
-      padding: 50px 10px;
-    }
+  .innerdiv {
+    padding: 50px 10px;
+  }
 
 
+}
+
+@media screen and (max-width: 720px) {
+
+  .row {
+    flex-direction: column;
+    padding: 0;
   }
-  @media screen and (max-width: 720px) {
 
-    .row{
-      flex-direction: column;
-      padding: 0;
-    }
-
-    .innerdiv{
-      padding: 50px 10px;
-    }
-
-
+  .innerdiv {
+    padding: 50px 10px;
   }
+
+
+}
