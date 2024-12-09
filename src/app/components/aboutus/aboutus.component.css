@@ -381,7 +381,7 @@
  
 @media (max-width: 420px) {
     .aboutus-container{
-        height: auto;
+        height: 100px;
     }
  
     .aboutus-main{

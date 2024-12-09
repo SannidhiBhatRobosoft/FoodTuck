@@ -5,8 +5,6 @@
 }
 
 .logo {
-  
-  
   width: 109px;
   height: 32px;
   opacity: 1; /* Changed to visible */
@@ -116,6 +114,89 @@
 
 .elements.active {
   display: flex;
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  font-size: 12px; /* Adjust font size as needed */
+  font-weight: bold;
+  width: 20px; /* Adjust badge size as needed */
+  height: 20px; /* Adjust badge size as needed */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #222;
+  color: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar.open {
+  right: 0;
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar-content {
+  margin-top: 0; /* Remove default margin */
+  font-size: 18px;
+}
+
+.sidebar-content p {
+  margin: 0;
+  font-size: 20px;
+  color: #ff9f0d;
+  padding: 10px 0; /* Add padding for spacing */
+}
+
+.sidebar-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebar-footer {
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #ff9f0d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 400px) {
