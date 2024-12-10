@@ -72,4 +72,8 @@ export class NavbarComponent {
   routetologin():void{
     this.router.navigate(['/login']);
   }
+  Handlelogoclick():void{
+    this.router.navigate(['/login']);
+  }
+
 }
