@@ -1,92 +1,81 @@
 <footer class="footer">
-    <div class="footer-top">
-        <div class="footer-top1">
+  <div class="footer-top">
+    <div class="footer-top1">
       <h3><span>Still</span> You Need Our Support?</h3>
       <p>Don’t wait make a smart & logical quote here. Its pretty easy.</p>
     </div>
-      <div class="subscribe-box">
-        <input type="email" placeholder="Enter Your Email">
-        <button>Subscribe Now</button>
-      </div>
+    <div class="subscribe-box">
+      <input type="email" placeholder="Enter Your Email" />
+      <button>Subscribe Now</button>
     </div>
- 
-    <div class="footer-main">
-      <div class="footer-section about-us">
-        <h4>About Us.</h4>
-        <p>
-          Corporate clients and leisure travelers have been relying on Groundlink
-          for dependable, safe, and professional chauffeured car service in major
-          cities across the world.
-        </p>
-        <div class="opening-hours">
-          <div class="icon-box">⟳</div>
-          <div class="hours">
-            <p>Opening Hours</p>
-            <p>Mon - Sat (8.00 - 6.00)<br>Sunday - Closed</p>
-          </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-section about-us">
+      <h4>About Us.</h4>
+      <p>
+        Corporate clients and leisure travelers have been relying on Groundlink
+        for dependable, safe, and professional chauffeured car service in major
+        cities across the world.
+      </p>
+      <div class="opening-hours">
+        <div class="icon-box">⟳</div>
+        <div class="hours">
+          <p>Opening Hours</p>
+          <p>Mon - Sat (8.00 - 6.00)<br />Sunday - Closed</p>
         </div>
       </div>
- 
-      <div class="footer-section useful-links">
-        <h4>Useful Links</h4>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Partners</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </div>
- 
-      <div class="footer-section help">
-        <h4>Help?</h4>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Term & Conditions</a></li>
-          <li><a href="#">Reporting</a></li>
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">Support Policy</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </div>
- 
-      <div class="footer-section recent-post">
-        <h4>Recent Post</h4>
-        <ul>
-          <li>
-            <img src="/img/post1.jpg" alt="Post">
-            <div>
-              <p>20 Feb 2022</p>
-              <p>Keep Your Business</p>
-            </div>
-          </li>
-          <li>
-            <img src="/img/post2.jpg" alt="Post">
-            <div>
-              <p>20 Feb 2022</p>
-              <p>Keep Your Business</p>
-            </div>
-          </li>
-          <li>
-            <img src="/img/post3.jpg" alt="Post">
-            <div>
-              <p>20 Feb 2022</p>
-              <p>Keep Your Business</p>
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
- 
-    <div class="footer-bottom">
-      <p>Copyright © 2022 by Ayeman. All Rights Reserved.</p>
-      <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-square-facebook" ></i></a>
-        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
-      </div>
+
+    <div class="footer-section useful-links">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
     </div>
-  </footer>
+
+    <div class="footer-section help">
+      <h4>Help?</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Term & Conditions</a></li>
+        <li><a href="#">Reporting</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Support Policy</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section recent-post">
+      <h4>Recent Post</h4>
+      <ul>
+        <li
+          *ngFor="let item of recentpost.slice(0, 3)"
+          (click)="clickonrecentpost(item._id)"
+        >
+          <img [src]="item.image_url" alt="Post" />
+          <div>
+            <p>{{ calculateDate(item.createdAt) }}</p>
+            <p>{{ item.description | truncate : 5 }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2022 by Ayeman. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+    </div>
+  </div>
+</footer>
