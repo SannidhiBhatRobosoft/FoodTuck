@@ -73,7 +73,7 @@ export class NavbarComponent {
     this.router.navigate(['/login']);
   }
   Handlelogoclick():void{
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
 }
