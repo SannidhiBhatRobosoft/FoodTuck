@@ -31,5 +31,9 @@
  
 }
 @media screen and (max-width:400px) {
- 
+  #ourmenu {
+    
+    font-size: 40px;
+    line-height: 1px;
+  }
 }

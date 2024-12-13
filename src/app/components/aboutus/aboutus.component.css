@@ -3,28 +3,28 @@
     min-height: 100vh;
     background-color: #fff;
 }
- 
- 
+
+
 .aboutus-titlecard {
     text-align: center;
     padding: 60px 20px;
     background: url('/img/Aboutus-back.jpg') no-repeat center center/cover;
     color: white;
 }
- 
+
 .aboutus-titlecard h1 {
     font-size: 2.8rem;
     font-weight: bold;
     color: #fff;
 }
- 
+
 .breadcrumb {
     font-size: 1rem;
     margin-top: 10px;
     color: #ddd;
 }
- 
- 
+
+
 .aboutus-main {
     display: flex;
     flex-wrap: wrap;
@@ -33,14 +33,14 @@
     max-width: 1200px;
     margin: auto;
     height: auto;
-    padding: 40px 20px;
+    padding: 40px 20px 0px 20px;
     background-color: #fff;
 }
- 
- 
- 
- 
- 
+
+
+
+
+
 .aboutus-images {
     display: grid;
     grid-template-areas:
@@ -52,16 +52,16 @@
     /* justify-content: center; */
     width: 100%;
     max-width: 600px;
-    padding: 20px;
+    /* padding: 20px; */
 }
- 
- 
+
+
 .aboutus-image-large {
     /* grid-area: large; */
     border-radius: 10px;
     overflow: hidden;
 }
- 
+
 .aboutus-image-large img {
     width: 100%;
     height: 100%;
@@ -69,23 +69,23 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
- 
- 
+
+
 .aboutus-image-small {
     grid-area: small;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
- 
+
 .aboutus-image-small img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
- 
- 
+
+
 .aboutus-left {
     flex: 1;
     display: grid;
@@ -93,34 +93,34 @@
     grid-template-columns: 1fr;
     padding: 20px;
 }
- 
+
 .aboutus-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
- 
- 
+
+
 .aboutus-right {
     flex: 1;
     padding: 20px;
     max-width: 450px;
-    margin-top: -15rem;
+    /* margin-top: -15rem; */
 }
- 
+
 .aboutus-subtitle {
     font-size: 1.5rem;
     color: #ffa726;
     font-weight: bold;
     /* margin-bottom: 10px; */
- 
+
     margin: 0;
     font-family: "Great Vibes", serif;
 }
- 
- 
- 
+
+
+
 .aboutus-title {
     font-size: 2.5rem;
     color: #333;
@@ -129,21 +129,21 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 0 1.5rem;
 }
- 
+
 .aboutus-description {
     font-size: 1rem;
     color: #666;
     margin-bottom: 30px;
     line-height: 1.8;
 }
- 
- 
+
+
 .aboutus-buttons {
     display: flex;
     align-items: center;
     gap: 15px;
 }
- 
+
 .btn-showmore {
     background-color: #ff8f00;
     color: white;
@@ -154,17 +154,17 @@
     font-size: .8rem;
     font-family: "Inter", sans-serif;
 }
- 
+
 .btn-showmore:hover {
     background-color: #ff8f00;
 }
- 
+
 .play-video {
     display: flex;
     align-items: center;
     gap: 10px;
 }
- 
+
 .btn-play {
     background-color: #ff8f00;
     color: white;
@@ -175,49 +175,48 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
- 
+
 .play-video span {
     color: #333;
     font-size: 1rem;
     font-weight: bold;
     font-family: "Inter", sans-serif;
 }
- 
- 
+
+
 .why-choose-us {
-    /* padding: 20px; */
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
- 
-}
- 
-.why-choose-us-title {
+    padding: 20px;
+  }
+  
+  .why-choose-us-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
- 
-.why-choose-us-subtitle {
+  }
+  
+  .why-choose-us-subtitle {
     font-size: 2.5rem;
     color: #333;
     margin: 0;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-}
- 
-.why-choose-us-description {
-    font-size: .8rem;
+  }
+  
+  .why-choose-us-description {
+    font-size: 0.8rem;
     color: #666;
     margin: 1rem 0;
     line-height: 1.5;
     width: 60%;
-}
- 
-.why-back-img {
+  }
+  
+  .why-back-img {
     width: 100%;
     height: 45vh;
     overflow: hidden;
@@ -227,19 +226,20 @@
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
- 
-.why-icons-list {
+  }
+  
+  .why-icons-list {
     display: flex;
- 
     align-items: center;
+    justify-content: center;
     margin: 2rem 0;
-    gap: 5rem;
-}
- 
-.why-icon-1,
-.why-icon-2,
-.why-icon-3 {
+    gap: 3rem;
+    flex-wrap: wrap; /
+  }
+  
+  .why-icon-1,
+  .why-icon-2,
+  .why-icon-3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,72 +247,63 @@
     text-align: center;
     font-size: 1rem;
     width: 20rem;
- 
-}
- 
-.why-icon-1>img {
+  }
+  
+  .why-icon-1 > img,
+  .why-icon-2 > img,
+  .why-icon-3 > img {
     width: 60px;
     margin-bottom: 1rem;
-}
- 
-.why-icon-2>img {
-    width: 60px;
-    margin-bottom: 1rem;
-}
- 
-.why-icon-3>img {
-    width: 60px;
-    margin-bottom: 1rem;
-}
- 
-.why-icon-title {
+  }
+  
+  .why-icon-title {
     font-size: 1.2rem;
     color: #333;
     margin: 0;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-}
- 
-.why-icon-description {
-    font-size: .8rem;
+  }
+  
+  .why-icon-description {
+    font-size: 0.8rem;
     color: #666;
     margin: 1rem 0;
     line-height: 1.5;
     width: 60%;
-}
- 
- 
- 
+  }
+
+
+
 /* team members */
- 
- 
-.teammembers-container{
+
+
+.teammembers-container {
     width: 100%;
     height: 100vh;
 }
- 
+
 .team-member {
     background: url('/img/Aboutus-back-3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 40vh;
- 
+
 }
- 
+
 .team-member-overlay {
     background-color: rgba(255, 146, 3, 0.788);
     padding: 4rem 0;
     height: 40vh;
     text-align: center;
 }
- 
- 
+
+
 .team-member-title {
     margin-bottom: 2rem;
-   
+
 }
- 
+
 .team-member-subtitle {
     font-size: 2.5rem;
     font-weight: bold;
@@ -320,7 +311,7 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
- 
+
 .team-member-description {
     color: white;
     font-size: 1rem;
@@ -331,15 +322,15 @@
     margin-right: auto;
     font-family: "Inter", sans-serif;
 }
- 
- 
+
+
 .team-cards {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
- 
+
 .team-card {
     background: white;
     width: 240px;
@@ -348,20 +339,20 @@
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- 
+
 .team-card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
- 
- 
+
+
 .team-card-image img {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
- 
- 
+
+
 .team-card-name {
     font-size: 1.1rem;
     font-weight: bold;
@@ -369,74 +360,94 @@
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
 }
- 
+
 .team-card-role {
     font-size: 0.9rem;
     color: gray;
     margin-bottom: 1rem;
     font-family: "Inter", sans-serif;
 }
- 
- 
- 
+
+
+
 @media (max-width: 420px) {
-    .aboutus-container{
-        height: 100px;
+    .aboutus-container {
+        /* height: 100px; */
+        min-height: 100vh;
     }
- 
-    .aboutus-main{
+
+    .aboutus-main {
         flex-direction: column;
         height: auto;
-        gap: 12rem;
+        /* gap: 12rem; */
     }
- 
-    .aboutus-right{
+
+    .aboutus-right {
         padding: 2rem 0rem;
     }
- 
-    .aboutus-title{
+
+    .aboutus-title {
         font-size: 32px;
         margin-bottom: 0;
     }
- 
-    .aboutus-subtitle{
+
+    .aboutus-subtitle {
         font-size: 22px;
     }
- 
-    .aboutus-description{
+
+    .aboutus-description {
         text-align: justify;
     }
- 
+
     .team-member-description {
         max-width: 100%;
     }
- 
-    .why-icons-list{
+
+    .why-icons-list {
         flex-direction: column;
         gap: 0;
-       
+
     }
- 
-    .why-choose-us-subtitle{
+
+    .why-choose-us-subtitle {
         font-size: 32px;
     }
- 
-    .why-choose-us-description{
+
+    .why-choose-us-description {
         width: 100%;
         padding: 0 1rem;
     }
- 
-   
+
+
 }
- 
+
 @media (max-width: 768px) {
     .team-cards {
         gap: 1rem;
+        padding: 0 1rem;
     }
- 
+
     .team-card {
         width: 100%;
         max-width: 320px;
         margin: 0 auto;
     }
+}
+
+@media (max-width: 1100px) {
+    .teammembers-container {
+
+        height: unset;
+    }
+
+    .team-member {
+
+        height: unset;
+
+    }
+
+    .team-member-overlay {
+        height: unset;
+    }
+
 }
