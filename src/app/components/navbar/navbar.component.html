@@ -1,6 +1,6 @@
 <div class="nav-bar">
   <div class="content">
-    <div class="logo">
+    <div class="logo" (click)="Handlelogoclick()">
       <p>Food<span>tuck</span></p>
     </div>
     <div class="hamburger" (click)="toggleMenu()">
@@ -45,8 +45,31 @@
     </div>
     <div class="vectos">
       <!-- <img src="/img/MagnifyingGlass.png" alt="" /> -->
-      <img src="/img/User.png" alt="image" />
-      <img src="/img/Tote.png" alt="image" />
+      <img src="/img/User.png" alt="image" (click)="toggleSidebar()" />
+      <div class="cart-icon-container" (click)="routetoCart()">
+        <img src="/img/Tote.png" alt="Cart Icon" />
+        <div class="cart-count-badge" *ngIf="cartItems.length>0">
+          {{ cartItems.length }}
+        </div>
+      </div>
+    </div>
+    <div class="sidebar" [class.open]="isSidebarOpen">
+      <div class="sidebar-header">
+        <h2>Profile</h2>
+        <button (click)="toggleSidebar()">X</button>
+      </div>
+      <div class="sidebar-content">
+        <p>Welcome, {{ userName }}</p>
+      </div>
+      <div class="sidebar-footer">
+        
+        @if(!isLoggedIn){
+          <button class="logout-btn" (click)="routetologin()">Log in</button>
+        }
+        @else {
+          <button class="logout-btn" (click)="logout()">Log Out</button>
+        }
+      </div>
     </div>
   </div>
 </div>

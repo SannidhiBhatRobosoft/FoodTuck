@@ -81,11 +81,13 @@
     .food-items-list {
       grid-template-columns: repeat(1, 1fr);
       gap: 10px;
+      padding: 25px;
     }
     
 
     .image-container>img{
       height:220px;
+      width: auto;
     }
   }
   

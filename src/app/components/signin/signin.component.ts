@@ -85,6 +85,7 @@ export class SigninComponent {
         )
         .subscribe(
           (res: HttpResponse<any>) => {
+            localStorage.setItem('email',this.signupForm.value.email)
             const jwtToken = res.headers.get('jwt-token'); // Replace with the actual key
             const refreshToken = res.headers.get('Refresh-Token'); // Replace with the actual key
 

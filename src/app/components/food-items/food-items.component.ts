@@ -25,7 +25,7 @@ export class FoodItemsComponent implements OnInit {
             name: food.name,
             image: food.images[0], // Get the first image
           }));
-        console.log(this.items); // Debug: Check the processed items
+      
       },
       (error) => {
         console.error('Error fetching shop data:', error);
