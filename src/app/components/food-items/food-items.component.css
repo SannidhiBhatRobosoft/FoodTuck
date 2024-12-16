@@ -54,7 +54,7 @@
 
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -72,6 +72,9 @@
 
   .food-items-main > h4 {
     font-size: 1.2rem;
+  }
+  .image-container img {
+    height: 60vh
   }
 }
 
@@ -98,6 +101,6 @@
   }
 
   .image-container img {
-    height: auto;
+    height: 50vh
   }
 }
