@@ -53,6 +53,12 @@
   font-weight: 700;
 }
 
+a.active {
+  color: #ff9f0d; 
+  font-weight: bold;
+  text-decoration: underline; 
+}
+
 .vectos {
   display: flex;
   gap: 2rem;
