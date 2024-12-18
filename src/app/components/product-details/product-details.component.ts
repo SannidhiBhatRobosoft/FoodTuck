@@ -86,6 +86,7 @@ export class ProductDetailsComponent implements OnInit {
       .subscribe(
         (res: any) => {
           //console.log(res.message);
+
           if (res?.message) {
             const temp = res.message;
             this.messageService.add({
@@ -94,6 +95,7 @@ export class ProductDetailsComponent implements OnInit {
               detail: temp, // Display the message
             });
           }
+          window.location.reload();
         },
         (err) => {
           if(err.status===400){
