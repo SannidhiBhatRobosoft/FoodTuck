@@ -6,6 +6,8 @@ import { FoodProcessComponent } from "../food-process/food-process.component";
 import { NewsBlogsComponent } from "../news-blogs/news-blogs.component";
 import { NavbarComponent } from '../navbar/navbar.component';
 import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-heropage',
   standalone: true,
